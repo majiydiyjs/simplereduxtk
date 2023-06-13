@@ -2,18 +2,10 @@ import { useSelector } from "react-redux";
 
 const Showdata = () => {
   const user = useSelector((state) => state.user);
-  const { username, email, passcode } = user || {};
+  const { name, lastname, email, passcode } = user || {};
+  localStorage.setItem("user", JSON.stringify(user));
 
-  return (
-    <div>
-      Username: {username}
-      <br />
-      Email: {email}
-      <br />
-      Passcode: {passcode}
-      <br />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Showdata;
